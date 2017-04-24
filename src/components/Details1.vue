@@ -16,6 +16,11 @@ export default {
             msg: 'Welcome to Your Vue.js App'
         }
     },
+    watch: {
+        '$route' (to, from) {
+            this.$store.dispatch('showDetails', { id: to.params.id })
+        }
+    },
     computed: mapGetters({
         item: 'selectedItem'
     })

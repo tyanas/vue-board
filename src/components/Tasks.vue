@@ -3,9 +3,11 @@
         <h2 class="header">Задачи</h2>
         <ul class="list">
             <li v-for="item in items" class="item"
-                v-bind:class="{ selected: item.selected }"
-                @click="showDetails(item)">
-                {{ item.status }} {{ item.title }}
+                v-bind:class="{ selected: item.selected }">
+                <span class="status">{{ item.status }}</span>
+                <router-link class="link" :to="{ name: 'task', params: { id: item.id } }">
+                    {{ item.title }}
+                </router-link>
             </li>
         </ul>
     </div>
@@ -21,10 +23,7 @@ export default {
     }),
     created: function () {
        this.$store.dispatch('getAllTasks')
-    },
-    methods: mapActions([
-        'showDetails'
-    ])
+    }
 }
 </script>
 
@@ -48,13 +47,25 @@ export default {
 }
 
 .item {
-    padding: 8px 20px;
+    display: flex;
+    padding: 0 20px 0 10px;
+}
+
+.status {
+    min-width: 20px;
+    align-self: center;
+    text-align: center;
+}
+
+.link {
+    flex: 1 0 0%;
+    padding: 8px 10px 8px 10px;
 }
 
 .selected {
     background-color: lightyellow;
 }
-.item:hover {
+.link:hover {
     background-color: yellow;
     cursor: pointer;
 }
