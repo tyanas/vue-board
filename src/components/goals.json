@@ -1,0 +1,46 @@
+[
+    {
+        "name":"min Vue",
+        "count": 3
+    },
+    {
+        "name":"lean webpack",
+        "count": 3
+    },
+    {
+        "name":"architecture",
+        "count": 1
+    },
+    {
+        "name":"components",
+        "count": 1
+    },
+    {
+        "name":"animation",
+        "count": 0
+    },
+    {
+        "name":"linting",
+        "count": 1
+    },
+    {
+        "name":"fps",
+        "count": 0
+    },
+    {
+        "name":"design",
+        "count": 0
+    },
+    {
+        "name":"types",
+        "count": 0
+    },
+    {
+        "name":"a11y",
+        "count": 0
+    },
+    {
+        "name":"tests",
+        "count": 0
+    }
+]

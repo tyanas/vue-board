@@ -2,22 +2,29 @@
     <div class="goals">
         <h2>Цели</h2>
         <ul>
-            <li>min Vue</li>
-            <li>lean webpack</li>
-            <li>architecture</li>
-            <li>components</li>
-            <li>animation</li>
-            <li>linting</li>
-            <li>fps</li>
-            <li>design</li>
-            <li>tests</li>
+            <li v-for="item in items">{{ item.name }} {{ item.count }}</li>
         </ul>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'goals'
+    name: 'goals',
+    data: function() {
+        return {
+            items: null
+        };
+    },
+
+    created: function () {
+        this.fetchData()
+    },
+
+    methods: {
+        fetchData: function () {
+            this.items = require('./goals.json');
+        }
+    }
 }
 </script>
 
