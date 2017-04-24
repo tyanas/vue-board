@@ -2,29 +2,29 @@
     <div class="tasks">
         <h2>Задачи</h2>
         <ul>
-            <li>Развернуть хоть что-то</li>
-            <li>определиться с layout</li>
-            <li>брать данные из json</li>
-            <li>брать данные из api</li>
-            <li>усложнить структуру данных из json/api</li>
-            <li>куда класть reset стили?</li>
-            <li>добавить какую-то реакцию на клики</li>
-            <li>связать выбор слева и центр</li>
-            <li>что в центре если ничего не выбрано?</li>
-            <li>элемент списка это отдельный компонент?</li>
-            <li>в списках добавить фильтр</li>
-            <li>отдельный компонент фильтр</li>
-            <li>css: занимает весь экран и не вылезает за пределы</li>
-            <li>сборка: оставить минимум</li>
-            <li>сборка: ручная проверка что в production что-то полезное</li>
-            <li>анимации: при выборе слева в центре плавно меняется на новое</li>
+            <li v-for="item in items">{{ item.status }} {{ item.title }}</li>
         </ul>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'tasks'
+    name: 'tasks',
+    data: function() {
+        return {
+            items: null
+        };
+    },
+
+    created: function () {
+        this.fetchData()
+    },
+
+    methods: {
+        fetchData: function () {
+            this.items = require('./tasks.json');
+        }
+    }
 }
 </script>
 
