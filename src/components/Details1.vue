@@ -1,9 +1,9 @@
 <template>
     <div class="details">
         <h1 v-show="!item.title">{{ msg }}</h1>
-        <h1 v-show="item.title">{{ item.title }}</h1>
-        <p>{{ item.description }}</p>
         <div v-show="item.title">
+            <h1>{{ item.title }}</h1>
+            <p>{{ item.description }}</p>
             <button class="close">
                 <router-link class="link" :to="{ name: 'home' }">
                     OK, got it!
