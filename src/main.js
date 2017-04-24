@@ -9,8 +9,9 @@ import store from './store/index.js'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-    mode: 'history',
+    // mode: 'history',
     routes: [
+        { path: '/', name: 'home' },
         { path: '/task/:id', name: 'task', component: Details1 }
     ]
 })

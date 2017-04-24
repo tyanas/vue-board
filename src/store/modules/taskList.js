@@ -30,7 +30,9 @@ const mutations = {
         if (prevSelected) {
             prevSelected.selected = false
         }
-        newlySelected.selected = true
+        if (newlySelected) {
+            newlySelected.selected = true
+        }
     },
 
     [types.RECEIVE_TASKS] (state, { items }) {

@@ -3,6 +3,13 @@
         <h1 v-show="!item.title">{{ msg }}</h1>
         <h1 v-show="item.title">{{ item.title }}</h1>
         <p>{{ item.description }}</p>
+        <div v-show="item.title">
+            <button class="close">
+                <router-link class="link" :to="{ name: 'home' }">
+                    OK, got it!
+                </router-link>
+            </button>
+        </div>
     </div>
 </template>
 
@@ -31,5 +38,22 @@ export default {
 <style scoped>
 .details {
     background-color: papayawhip;
+    padding: 20px;
 }
+
+.close {
+    line-height: 1.5;
+    font-size: 25px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover,
+.link:active,
+.link:visited {
+    color: initial;
+}
+
 </style>
