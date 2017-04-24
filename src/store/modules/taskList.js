@@ -23,6 +23,16 @@ const actions = {
 // mutations
 
 const mutations = {
+    [types.SHOW_DETAILS] (state, { id }) {
+        let prevSelected = state.all.find(item => item.selected)
+        let newlySelected = state.all.find(item => item.id == id)
+
+        if (prevSelected) {
+            prevSelected.selected = false
+        }
+        newlySelected.selected = true
+    },
+
     [types.RECEIVE_TASKS] (state, { items }) {
         state.all = items
     }

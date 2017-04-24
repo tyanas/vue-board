@@ -1,8 +1,10 @@
 <template>
     <div class="tasks">
-        <h2>Задачи</h2>
-        <ul>
-            <li v-for="item in items" class="item" @click="showDetails(item)">
+        <h2 class="header">Задачи</h2>
+        <ul class="list">
+            <li v-for="item in items" class="item"
+                v-bind:class="{ selected: item.selected }"
+                @click="showDetails(item)">
                 {{ item.status }} {{ item.title }}
             </li>
         </ul>
@@ -29,12 +31,29 @@ export default {
 <style scoped>
 .tasks {
     background-color: mistyrose;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    margin: 0;
+    padding: 8px 16px;
+    background-color: wheat;
+}
+
+.list {
+    margin: 0;
+    flex: 1 0 0%;
+    overflow: scroll;
 }
 
 .item {
-    padding: 4px 8px;
+    padding: 8px 20px;
 }
 
+.selected {
+    background-color: lightyellow;
+}
 .item:hover {
     background-color: yellow;
     cursor: pointer;

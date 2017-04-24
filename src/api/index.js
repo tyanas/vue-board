@@ -1,14 +1,29 @@
+const MAX_COUNT = 20;
+
 /**
  * Mocking client-server processing
  */
 
 export default {
     getTasks (cb) {
-        const items = require('./tasks.json');
-        setTimeout(() => cb(items), 100)
+        let items = require('./tasks.json');
+
+        items = items.map(item => {
+            item.selected = false
+
+            return item
+        })
+        setTimeout(() => cb(items), 1000)
     },
     getGoals (cb) {
-        const items = require('./goals.json');
-        setTimeout(() => cb(items), 100)
+        let items = require('./goals.json');
+
+        items = items.map(item => {
+            item.relativeCount = item.count * 100 / MAX_COUNT
+            item.shiftCount = -100 + item.relativeCount
+
+            return item
+        })
+        setTimeout(() => cb(items), 2000)
     },
 }

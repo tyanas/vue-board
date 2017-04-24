@@ -25,6 +25,7 @@
     },
     {
         "id": 5,
+        "status": "✓",
         "title": "сделать демку на github.io",
         "weight": 100
     },
