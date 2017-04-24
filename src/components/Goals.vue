@@ -8,22 +8,15 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
     name: 'goals',
-    data: function() {
-        return {
-            items: null
-        };
-    },
-
+    computed: mapGetters({
+        items: 'allGoals'
+    }),
     created: function () {
-        this.fetchData()
-    },
-
-    methods: {
-        fetchData: function () {
-            this.items = require('./goals.json');
-        }
+        this.$store.dispatch('getAllGoals')
     }
 }
 </script>

@@ -1,7 +1,7 @@
 [
     {
         "name":"min Vue",
-        "count": 3
+        "count": 7
     },
     {
         "name":"lean webpack",
@@ -9,7 +9,7 @@
     },
     {
         "name":"architecture",
-        "count": 1
+        "count": 2
     },
     {
         "name":"components",
