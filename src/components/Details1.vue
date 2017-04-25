@@ -2,6 +2,7 @@
     <div class="details">
         <div class="details-inner">
             <h1 v-show="!item.title">{{ msg }}</h1>
+            <transition name="fade">
             <div v-show="item.title">
                 <h1>{{ item.title }}</h1>
                 <p v-html="item.description"></p>
@@ -11,6 +12,7 @@
                     </router-link>
                 </button>
             </div>
+            </transition>
         </div>
     </div>
 </template>
@@ -67,4 +69,10 @@ export default {
     color: white;
 }
 
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+    opacity: 0
+}
 </style>

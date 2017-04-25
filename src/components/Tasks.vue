@@ -1,7 +1,8 @@
 <template>
     <div class="tasks">
         <h2 class="header">Задачи</h2>
-        <ul class="list">
+        <transition name="fade">
+        <ul v-if="items.length" class="list">
             <li v-for="item in items" class="item"
                 v-bind:class="{ selected: item.selected }">
                 <span class="status">{{ item.status }}</span>
@@ -10,6 +11,7 @@
                 </router-link>
             </li>
         </ul>
+        </transition>
     </div>
 </template>
 
@@ -32,16 +34,38 @@ export default {
     background-color: peachpuff;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+.tasks:after {
+    content: '';
+    height: 32px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-shadow: inset 0 -32px 32px -12px peachpuff;
 }
 
 .header {
     margin: 0;
     padding: 8px 16px;
     background-color: tomato;
+    position: relative;
+}
+.header:after {
+    content: '';
+    height: 32px;
+    display: block;
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    width: 100%;
+    box-shadow: inset 0px 32px 29px -14px peachpuff;
 }
 
 .list {
     margin: 0;
+    padding: 16px 0;
     flex: 1 0 0%;
     overflow: scroll;
 }
@@ -57,16 +81,23 @@ export default {
     text-align: center;
 }
 
+.selected {
+    background-color: lightyellow;
+}
+
 .link {
     flex: 1 0 0%;
     padding: 8px 10px 8px 10px;
 }
-
-.selected {
-    background-color: lightyellow;
-}
 .link:hover {
     background-color: yellow;
     cursor: pointer;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+    opacity: 0
 }
 </style>
