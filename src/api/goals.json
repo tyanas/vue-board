@@ -17,7 +17,7 @@
     },
     {
         "name":"animation",
-        "count": 1
+        "count": 3
     },
     {
         "name":"linting and git",
@@ -29,7 +29,7 @@
     },
     {
         "name":"design",
-        "count": 7
+        "count": 9
     },
     {
         "name":"types",
@@ -37,7 +37,7 @@
     },
     {
         "name":"a11y",
-        "count": 1
+        "count": 2
     },
     {
         "name":"tests",

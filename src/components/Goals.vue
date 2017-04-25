@@ -1,7 +1,14 @@
 <template>
     <div class="goals">
         <h2 class="header">Цели</h2>
-        <ul class="list">
+        <button class="show"  v-show="!items.length"
+            :disabled="processing"
+            @click="getGoals()">
+            Показать
+        </button>
+        <video id="video" v-show="processing && !items.length" class="spinner" src="./assets/corgi.mp4" muted preload />
+        <transition name="fade">
+        <ul v-if="items.length" class="list" >
             <li class="item" v-for="item in items">
                 <div class="name">{{ item.name }}</div>
                 <div class="progress">
@@ -9,6 +16,7 @@
                 </div>
             </li>
         </ul>
+        </transition>
     </div>
 </template>
 
@@ -17,11 +25,27 @@ import { mapGetters } from 'vuex'
 
 export default {
     name: 'goals',
+    data: function() {
+        return {
+            processing: null
+        }
+    },
     computed: mapGetters({
         items: 'allGoals'
     }),
+    methods:{
+        getGoals: function() {
+            var video = document.getElementById('video');
+
+            if (video) {
+                video.play();
+            }
+
+            this.processing = true;
+            this.$store.dispatch('getAllGoals', this.processing)
+        }
+    },
     created: function () {
-        this.$store.dispatch('getAllGoals')
     }
 }
 </script>
@@ -33,6 +57,10 @@ export default {
     flex-direction: column;
 }
 
+.spinner {
+    margin: 24px auto;
+    width: 300px;
+}
 .header {
     margin: 0;
     padding: 8px 16px;
@@ -80,6 +108,29 @@ export default {
     width: 100%;
     height: 6px;
     background-color: green;
+}
+
+.show {
+    line-height: 1.5;
+    font-size: 25px;
+    background-color: dodgerblue;
+    border: 0;
+    padding: 8px 10px;
+    color: white;
+    cursor: pointer;
+    width: auto;
+    margin: 24px auto;
+}
+
+.show[disabled] {
+    opacity: 0.5;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+    opacity: 0
 }
 </style>
 

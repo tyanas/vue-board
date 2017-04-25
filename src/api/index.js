@@ -24,6 +24,6 @@ export default {
 
             return item
         })
-        setTimeout(() => cb(items), 2000)
+        setTimeout(() => cb(items), 10000)
     },
 }
