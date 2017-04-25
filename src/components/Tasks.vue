@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
 .tasks {
-    background-color: mistyrose;
+    background-color: peachpuff;
     display: flex;
     flex-direction: column;
 }
@@ -37,7 +37,7 @@ export default {
 .header {
     margin: 0;
     padding: 8px 16px;
-    background-color: wheat;
+    background-color: tomato;
 }
 
 .list {

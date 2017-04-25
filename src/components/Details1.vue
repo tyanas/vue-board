@@ -38,22 +38,27 @@ export default {
 <style scoped>
 .details {
     background-color: papayawhip;
-    padding: 20px;
+    padding: 32px 40px;
+    margin-bottom: 8px;
 }
 
 .close {
     line-height: 1.5;
     font-size: 25px;
+    background-color: dodgerblue;
+    border: 0;
 }
 
 .link {
+    padding: 8px 10px;
     text-decoration: none;
+    color: white;
 }
 
 .link:hover,
 .link:active,
 .link:visited {
-    color: initial;
+    color: white;
 }
 
 </style>

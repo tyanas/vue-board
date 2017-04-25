@@ -1,8 +1,10 @@
 <template>
     <div class="app">
         <tasks class="tasks"></tasks>
-        <details1 class="details"></details1>
-        <goals class="goals"></goals>
+        <main class="main">
+            <details1 class="details"></details1>
+            <goals class="goals"></goals>
+        </main>
     </div>
 </template>
 
@@ -33,7 +35,6 @@ export default {
     max-width: 1268px;
     display: flex;
     align-items: stretch;
-    /*justify-content: space-around;*/
     padding: 10px 20px;
     height: calc(100vh - 20px);
 }
@@ -43,8 +44,14 @@ export default {
     flex: 2 0 0%;
 }
 
+.main {
+    margin-left: 10px;
+    flex: 3 0 0%;
+    display: flex;
+    flex-direction: column
+}
 .details {
-    flex: 2 0 0%;
+    flex: 1 0 0%;
 }
 
 .goals {

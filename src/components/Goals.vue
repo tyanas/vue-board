@@ -29,21 +29,29 @@ export default {
 <style scoped>
 .goals {
     background-color: lightcyan;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
     margin: 0;
     padding: 8px 16px;
-    background-color: wheat;
+    background-color: LightSkyBlue;
 }
 
 .list {
     margin: 0;
     flex: 1 0 0%;
     overflow: scroll;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .item {
+    width: 50%;
+    box-sizing: border-box;
     padding: 8px 20px;
 }
 
