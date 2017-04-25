@@ -82,7 +82,7 @@ export default {
 }
 
 .selected {
-    background-color: lightyellow;
+    background-color: papayawhip;
 }
 
 .link {
@@ -92,6 +92,10 @@ export default {
 .link:hover {
     background-color: yellow;
     cursor: pointer;
+    color: midnightblue;
+}
+.link:active {
+    color: maroon;
 }
 
 .fade-enter-active, .fade-leave-active {

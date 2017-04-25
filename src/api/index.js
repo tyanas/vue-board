@@ -10,9 +10,15 @@ export default {
 
         items = items.map(item => {
             item.selected = false
+            if (!item.status) {
+                item.status = ''
+            }
 
             return item
+        }).sort((a, b) => {
+            return a.status.localeCompare(b.status)
         })
+
         setTimeout(() => cb(items), 1000)
     },
     getGoals (cb) {

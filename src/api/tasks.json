@@ -38,39 +38,40 @@
         "id": 6,
         "status": "✓",
         "title": "Выделение таска должно отражаться в урле",
-        "description": "",
+        "description": "выделение таска - это просто клик по ссылке, которая формируется компонентом  <code>router-link</code>",
         "weight": 100
     },
     {
         "id": 61,
         "title": "Таск из урла должен показываться",
-        "description": "",
+        "description": "Надо связать vuex (store) и router",
         "weight": 100
     },
     {
         "id": 62,
         "title": "Support for history.back()",
-        "description": "",
+        "description": "должно поддерживаться в том числе перемещение по истории взмахами по тачпаду",
         "weight": 100
     },
     {
         "id": 7,
         "status": "✓",
         "title": "Брать данные из json",
-        "description": "",
+        "description": "используем require стобы подгрузить соответствующий json: один для списка таском, другой для списка целей",
         "weight": 100
     },
     {
         "id": 8,
         "status": "✓",
         "title": "Брать данные из api",
-        "description": "",
+        "description": "Взаимодействие с удаленным бэкендом изображается с помощью чтения из json файликов по <code>setTimeout</code>",
         "weight": 100
     },
     {
         "id": 9,
+        "status": "✓",
         "title": "Анимации: ожидание данных",
-        "description": "",
+        "description": "Используется встроенный во Vue transition, которые срабатывает, когда ответ от АПИ попадает в binding компонента",
         "weight": 100
     },
     {
@@ -83,13 +84,13 @@
         "id": 11,
         "status": "✓",
         "title": "Усложнить структуру данных из json/api",
-        "description": "Пришлось узнать про директиву v-html. В версии 1.0 для того же использовались тройные фигурные скобки",
+        "description": "Пришлось узнать про директиву <code>v-html</code>. В версии 1.0 для того же использовались тройные фигурные скобки",
         "weight": 100
     },
     {
         "id": 12,
         "title": "Куда класть reset стили?",
-        "description": "",
+        "description": "Пока лежат прямо в index.html",
         "weight": 100
     },
     {

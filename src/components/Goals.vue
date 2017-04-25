@@ -6,7 +6,7 @@
             @click="getGoals()">
             Показать
         </button>
-        <video id="video" v-show="processing && !items.length" class="spinner" src="./assets/corgi.mp4" muted preload />
+        <video id="video" v-show="processing && !items.length" class="spinner" src="http://tyanas.ru/demo/assets/corgi.mp4" muted preload />
         <transition name="fade">
         <ul v-if="items.length" class="list" >
             <li class="item" v-for="item in items">
@@ -92,7 +92,7 @@ export default {
 
 .progress {
     display: inline-block;
-    background-color: #c2c2c2;
+    background-color: gainsboro;
     width: 100%;
     height: 6px;
     border-radius: 3px;
