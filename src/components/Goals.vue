@@ -36,7 +36,7 @@ export default {
 .header {
     margin: 0;
     padding: 8px 16px;
-    background-color: LightSkyBlue;
+    background-color: lightskyblue;
 }
 
 .list {
@@ -45,7 +45,7 @@ export default {
     overflow: scroll;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* not working in ff 53.0 */
     flex-wrap: wrap;
 }
 

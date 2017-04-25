@@ -1,9 +1,9 @@
 <template>
     <div class="app">
-        <tasks class="tasks"></tasks>
+        <tasks class="app-tasks"></tasks>
         <main class="main">
-            <details1 class="details"></details1>
-            <goals class="goals"></goals>
+            <details1 class="app-details"></details1>
+            <goals class="app-goals"></goals>
         </main>
     </div>
 </template>
@@ -39,7 +39,7 @@ export default {
     height: calc(100vh - 20px);
 }
 
-.tasks {
+.app-tasks {
     box-sizing: border-box;
     flex: 2 0 0%;
 }
@@ -50,11 +50,11 @@ export default {
     display: flex;
     flex-direction: column
 }
-.details {
+.app-details {
     flex: 1 0 0%;
 }
 
-.goals {
+.app-goals {
     flex: 1 0 0%;
 }
 </style>

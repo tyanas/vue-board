@@ -20,8 +20,8 @@
         "count": 1
     },
     {
-        "name":"linting",
-        "count": 1
+        "name":"linting and git",
+        "count": 3
     },
     {
         "name":"fps",
@@ -41,6 +41,6 @@
     },
     {
         "name":"tests",
-        "count": 0
+        "count": 1
     }
 ]

@@ -41,6 +41,11 @@
         "weight": 100
     },
     {
+        "id": 62,
+        "title": "support for history.back()",
+        "weight": 100
+    },
+    {
         "id": 7,
         "status": "✓",
         "title": "брать данные из json",
@@ -70,6 +75,11 @@
     {
         "id": 12,
         "title": "куда класть reset стили?",
+        "weight": 100
+    },
+    {
+        "id": 121,
+        "title": "починить flex wrap + scroll in ff 53.0",
         "weight": 100
     },
     {
