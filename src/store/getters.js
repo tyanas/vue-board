@@ -10,7 +10,7 @@ export const selectedItem = state => {
     if (task) {
         return {
             title: task.title,
-            weight: task.weight
+            description: task.description
         }
     }
 

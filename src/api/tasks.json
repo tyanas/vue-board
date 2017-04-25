@@ -3,138 +3,164 @@
         "id": 1,
         "status": "✓",
         "title": "Развернуть хоть что-то",
+        "description": "Чтобы с чего-то начать, надо с чего-то начать",
         "weight": 100
     },
     {
         "id": 2,
         "status": "✓",
-        "title": "определиться с layout",
+        "title": "Определиться с layout",
+        "description": "",
         "weight": 100
     },
     {
         "id": 3,
         "status": "✓",
-        "title": "сделать min проект",
+        "title": "Сделать min проект",
+        "description": "Может быть, это было самое сложное. Потому что очень много вариантов, как всё организовать. Надо выбрать что-то одно и начать уже совершать разные ошибки.",
         "weight": 100
     },
     {
         "id": 4,
         "status": "✓",
-        "title": "закинуть на github",
+        "title": "Закинуть на github",
+        "description": "<a href=\"https://github.com/tyanas/vue-board\">github.com/tyanas/vue-board</a>",
         "weight": 100
     },
     {
         "id": 5,
         "status": "✓",
-        "title": "сделать демку на github.io",
+        "title": "Сделать демку на github.io",
+        "description": "С небольшим лагом по времени показывается тут <a href=\"https://tyanas.github.io/vue-board/\">tyanas.github.io/vue-board</a>",
         "weight": 100
     },
     {
         "id": 6,
         "status": "✓",
-        "title": "выделение таска должно отражаться в урле",
+        "title": "Выделение таска должно отражаться в урле",
+        "description": "",
         "weight": 100
     },
     {
         "id": 61,
         "title": "Таск из урла должен показываться",
+        "description": "",
         "weight": 100
     },
     {
         "id": 62,
-        "title": "support for history.back()",
+        "title": "Support for history.back()",
+        "description": "",
         "weight": 100
     },
     {
         "id": 7,
         "status": "✓",
-        "title": "брать данные из json",
+        "title": "Брать данные из json",
+        "description": "",
         "weight": 100
     },
     {
         "id": 8,
         "status": "✓",
-        "title": "брать данные из api",
+        "title": "Брать данные из api",
+        "description": "",
         "weight": 100
     },
     {
         "id": 9,
-        "title": "анимации: ожидание данных",
+        "title": "Анимации: ожидание данных",
+        "description": "",
         "weight": 100
     },
     {
         "id": 10,
-        "title": "анимации: появление данных",
+        "title": "Анимации: появление данных",
+        "description": "",
         "weight": 100
     },
     {
         "id": 11,
-        "title": "усложнить структуру данных из json/api",
+        "status": "✓",
+        "title": "Усложнить структуру данных из json/api",
+        "description": "Пришлось узнать про директиву v-html. В версии 1.0 для того же использовались тройные фигурные скобки",
         "weight": 100
     },
     {
         "id": 12,
-        "title": "куда класть reset стили?",
+        "title": "Куда класть reset стили?",
+        "description": "",
         "weight": 100
     },
     {
         "id": 121,
-        "title": "починить flex wrap + scroll in ff 53.0",
+        "title": "Починить flex wrap + scroll in ff 53.0",
+        "description": "",
         "weight": 100
     },
     {
         "id": 13,
         "status": "✓",
-        "title": "добавить какую-то реакцию на клики",
+        "title": "Добавить какую-то реакцию на клики",
+        "description": "",
         "weight": 100
     },
     {
         "id": 14,
         "status": "✓",
-        "title": "связать выбор слева и центр",
+        "title": "Связать выбор слева и центр",
+        "description": "",
         "weight": 500
     },
     {
         "id": 15,
         "status": "✓",
-        "title": "что в центре если ничего не выбрано?",
+        "title": "Что в центре если ничего не выбрано?",
+        "description": "",
         "weight": 100
     },
     {
         "id": 16,
-        "title": "элемент списка это отдельный компонент?",
+        "title": "Элемент списка это отдельный компонент?",
+        "description": "",
         "weight": 100
     },
     {
         "id": 17,
-        "title": "в списках добавить фильтр",
+        "title": "В списках добавить фильтр",
+        "description": "",
         "weight": 100
     },
     {
         "id": 18,
-        "title": "отдельный компонент фильтр",
+        "title": "Отдельный компонент фильтр",
+        "description": "",
         "weight": 100
     },
     {
         "id": 19,
         "status": "✓",
-        "title": "css: занимает весь экран и не вылезает за пределы",
+        "title": "Css: занимает весь экран и не вылезает за пределы",
+        "description": "",
         "weight": 100
     },
     {
         "id": 20,
-        "title": "сборка: оставить минимум",
+        "title": "Сборка: оставить минимум",
+        "description": "",
         "weight": 100
     },
     {
         "id": 21,
         "status": "✓",
-        "title": "сборка: ручная проверка что в production что-то полезное",
+        "title": "Сборка: ручная проверка что в production что-то полезное",
+        "description": "Надо перед пушем собирать билд. pre-push hook c автокоммитом?",
         "weight": 100
     },
     {
         "id": 22,
-        "title": "анимации: при выборе слева в центре плавно меняется на новое",
+        "title": "Анимации: при выборе слева в центре плавно меняется на новое",
+        "description": "",
         "weight": 100
     }
 ]

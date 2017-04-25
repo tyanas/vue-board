@@ -41,6 +41,7 @@ export default {
 
 .list {
     margin: 0;
+    padding: 24px 0;
     flex: 1 0 0%;
     overflow: scroll;
 

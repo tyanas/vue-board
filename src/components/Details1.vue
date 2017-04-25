@@ -1,14 +1,16 @@
 <template>
     <div class="details">
-        <h1 v-show="!item.title">{{ msg }}</h1>
-        <div v-show="item.title">
-            <h1>{{ item.title }}</h1>
-            <p>{{ item.description }}</p>
-            <button class="close">
-                <router-link class="link" :to="{ name: 'home' }">
-                    OK, got it!
-                </router-link>
-            </button>
+        <div class="details-inner">
+            <h1 v-show="!item.title">{{ msg }}</h1>
+            <div v-show="item.title">
+                <h1>{{ item.title }}</h1>
+                <p v-html="item.description"></p>
+                <button class="close">
+                    <router-link class="link" :to="{ name: 'home' }">
+                        OK, got it!
+                    </router-link>
+                </button>
+            </div>
         </div>
     </div>
 </template>
@@ -38,8 +40,12 @@ export default {
 <style scoped>
 .details {
     background-color: papayawhip;
-    padding: 32px 40px;
     margin-bottom: 8px;
+}
+
+.details-inner {
+    padding: 48px 50px;
+    box-sizing: border-box;
 }
 
 .close {
