@@ -3,7 +3,7 @@
         <h2 class="header">Цели</h2>
         <button class="show"  v-show="!items.length"
             :disabled="processing"
-            @click="getGoals()">
+            @click="getGoals">
             Показать
         </button>
         <video id="video" v-show="processing && !items.length" class="spinner" src="http://tyanas.ru/demo/assets/corgi.mp4" muted preload />

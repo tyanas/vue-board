@@ -43,8 +43,9 @@
     },
     {
         "id": 61,
+        "status": "✓",
         "title": "Таск из урла должен показываться",
-        "description": "Надо связать vuex (store) и router",
+        "description": "Надо связать vuex (store) и router. Оказалось достаточно добавить синхронизацию вьюхи с урлом по mounted вьюхи",
         "weight": 100
     },
     {

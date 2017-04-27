@@ -27,6 +27,9 @@ export default {
             msg: 'Welcome to Your Vue.js App'
         }
     },
+    mounted() {
+        this.$store.dispatch('showDetails', { id: Number(this.$route.params.id) });
+    },
     watch: {
         '$route' (to, from) {
             this.$store.dispatch('showDetails', { id: to.params.id })
